@@ -9,14 +9,14 @@ const {
 } = require('../controllers/playlist.CRUD');
 const playList = require('../models/playlist.models');
 
-routerPlayList.get('/api/obtenerPlayLists/:id_usuario', obtenerPlayLists);
+routerPlayList.get('/api/PlayLists/:id_usuario', obtenerPlayLists);
 
-routerPlayList.get('/api/obtenerPlayList/:idPlayList', obtenerPlayList);
+routerPlayList.get('/api/PlayList/:idPlayList', obtenerPlayList);
  
-routerPlayList.post('/api/nuevaPlayList/:id_usuario', nuevaPlayList);
+routerPlayList.post('/api/PlayList/:id_usuario', nuevaPlayList);
  
-routerPlayList.put('/api/actualizarPlayList/:idPlayList', actualizarPlayList);
+routerPlayList.put('/api/PlayList/:idPlayList', actualizarPlayList);
 
-routerPlayList.delete('/api/eliminarPlayList/:idPlayList', eliminarPlayList);
+routerPlayList.delete('/api/PlayList/:idPlayList', eliminarPlayList);
 
 module.exports = routerPlayList;

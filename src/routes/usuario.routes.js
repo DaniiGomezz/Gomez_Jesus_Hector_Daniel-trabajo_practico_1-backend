@@ -6,9 +6,9 @@ const {
 } = require('../controllers/usuario.CRUD')
 
 // Obtener todos los usuarios
-routerUsuarios.get('/api/obtenerUsuarios', obtenerlosUsuarios);
+routerUsuarios.get('/api/Usuarios', obtenerlosUsuarios);
  
 // Crear un usuario
-routerUsuarios.post('/api/crearUsuario', crearUsuario);
+routerUsuarios.post('/api/Usuario', crearUsuario);
 
 module.exports = routerUsuarios;
