@@ -3,6 +3,9 @@ const express = require('express');
 const morgan = require('morgan');
 const cors = require('cors');
 const dotenv = require('dotenv');
+const Usuarios = require('./src/models/usuario.models');
+const playList = require('./src/models/playlist.models');
+const canciones = require('./src/models/canciones.models');
 
 
 const { conexionBaseDatos } = require('./src/db/dbconnect');
