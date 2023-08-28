@@ -1,5 +1,5 @@
 const routerUsuarios = require('express').Router();
-
+const {validarEsquema, validacion} = require('../middlewares/usuario-validator');
 const {
     obtenerlosUsuarios,
     crearUsuario
@@ -9,6 +9,6 @@ const {
 routerUsuarios.get('/api/Usuarios', obtenerlosUsuarios);
  
 // Crear un usuario
-routerUsuarios.post('/api/Usuario', crearUsuario);
+routerUsuarios.post('/api/Usuario',  validacion, validarEsquema, crearUsuario);
 
 module.exports = routerUsuarios;
