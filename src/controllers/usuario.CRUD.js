@@ -1,6 +1,6 @@
 const Usuarios = require('../models/usuario.models');
 const ctrlUsuarios = {};
-
+const bcrypt = require('bcrypt')
 // Obtener todos los usuarios
 ctrlUsuarios.obtenerlosUsuarios = async (req, res) => {
     try {
