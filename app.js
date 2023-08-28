@@ -19,5 +19,10 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(morgan('dev'));
 
+app.use(require('./src/routes/canciones.routes'));
+app.use(require('./src/routes/playlist.routes'));
+app.use(require('./src/routes/usuario.routes'));
+
+
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Servidor funcionando en el puerto ${port}`))
