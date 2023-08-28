@@ -30,12 +30,14 @@ ctrlUsuarios.crearUsuario = async (req, res) => {
     } = req.body;
 
     try {
+        const hashedPassword = await bcrypt.hash(contraseña, 10);
         const nuevoUsuario = new Usuarios({
+            
             nombre,
             apellido,
             email,
             usuario,
-            contraseña
+            contraseña:hashedPassword
         });
 
         await nuevoUsuario.save();
